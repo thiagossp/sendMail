@@ -1,3 +1,6 @@
-# sendMail
-This is a simple code for to send mass mails for the same recipient and with one different attachment in each message.
-The code reads all files in a directory with a specific extension and send all files by attachment. File by file.
+# Motivation 
+A person needs to send multiple files by email to a system, but each file must be sent in an individual message because the system reads the attached file and uses it to update the data.
+
+# Objective
+
+- Send bulk emails to the same recipient and with a different attachment in each message. The code needs to read all files with a specific extension within a directory and send them all by attachment. File by file.
