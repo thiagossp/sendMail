@@ -13,15 +13,12 @@ cfg.read('conf.ini')
 # list files to attachment
 directory  = os.listdir(cfg.get('general', 'path'))
 files = [arq for arq in directory if arq.lower().endswith(cfg.get('general', 'type'))]
-# get mail password
 password = getpass.getpass("Password: ")
 
 # send a mail to each attachment
 for fileName in files:
-    # create message object instance
     msg = MIMEMultipart()
-
-    # setup the parameters of the message    
+  
     msg['From'] = cfg.get('server', 'from')
     msg['To'] = cfg.get('server', 'to')
     msg['Subject'] = "Arquivo: %s" % fileName
